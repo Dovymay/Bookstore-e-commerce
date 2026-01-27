@@ -1,11 +1,10 @@
-import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="navbar-container">
       <p>Home</p>
+      <p>Search</p>
       <p>Cart</p>
-      
     </div>
   )
 }

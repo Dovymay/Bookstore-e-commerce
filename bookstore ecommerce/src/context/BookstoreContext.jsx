@@ -1,7 +1,6 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 // import { useNavigate } from "react-router-dom";
-import React from 'react'
 
 const BookstoreContext = createContext()
 
@@ -20,6 +19,17 @@ const fetchBookStore = async () => {
         }
      }   
 
+     const fetchSingleBook = async (id, setBook) => {
+        try {
+            const response = await axios.get(
+                `http://localhost:5005/books/${id}`
+            )
+            setBook(response.data)
+        } catch (error) {
+            console.log(error)
+        }
+     }
+
      useEffect (()=>{
         fetchBookStore()
      }, [])
@@ -27,7 +37,7 @@ const fetchBookStore = async () => {
 
   return (
     <BookstoreContext.Provider
-    value ={{books, setBooks}}>
+    value ={{books, setBooks, fetchSingleBook}}>
         {children}
      
     </BookstoreContext.Provider>
