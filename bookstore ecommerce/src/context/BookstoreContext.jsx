@@ -8,16 +8,7 @@ const BookstoreContext = createContext()
 
 const Bookstore = ({children}) => {
     const [books, setBooks] = useState([])
-const fetchBookStore = async () => {
-        try {
-            const response = await axios.get("http://localhost:5005/books")
 
-            setBooks(response.data)
-            console.log(response.data)
-        }catch (error){
-            console.log(error)
-        }
-     }   
 
      const fetchSingleBook = async (id, setBook) => {
         try {
@@ -31,6 +22,16 @@ const fetchBookStore = async () => {
      }
 
      useEffect (()=>{
+        const fetchBookStore = async () => {
+        try {
+            const response = await axios.get("http://localhost:5005/books")
+
+            setBooks(response.data)
+            console.log(response.data)
+        }catch (error){
+            console.log(error)
+        }
+     }   
         fetchBookStore()
      }, [])
 

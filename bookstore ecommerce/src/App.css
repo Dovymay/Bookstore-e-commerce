@@ -5,7 +5,7 @@
 "navy-card": "#0f172a", // Navy Blue 900
  "navy-sidebar": "#070c1b", // Slightly darker navy for sidebar
 "border-navy": "#1e293b", // Navy 800
- "accent-teal": "#2dd4bf", // Bright Teal 400
+ "accent-teal": "#2dd4bf", // Bright Teal 400 font color for details page
 "teal-dim": "#134e4a", // Deep Teal
 
 */
@@ -13,8 +13,12 @@
 *{
   margin: 0;
   padding: 0;
+  /* background-color: #020617; */
+  /* color: white; */
+}
+
+body {
   background-color: #020617;
-  color: white;
 }
 
 .navbar-container{
@@ -44,3 +48,52 @@
   width: 99vw;
 }
 
+.single-book-container{
+  display: flex;
+  background-color: #020617;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  /* border: teal 10px solid */
+}
+
+.single-book-content{
+  display : flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.single-book-image{
+  /* border: 5px solid yellow; */
+  margin-left: 50px;
+  margin-top: 50px;
+  height: 70vh;
+}
+
+.Single-book-cover{
+  width: 20vw;
+}
+
+.single-book-title{
+  /* border: 10px solid green; */
+  margin-bottom: 20px;
+}
+
+.single-book-title p {
+  color: #2dd4bf;
+}
+.single-book-priceinfo{
+  background-color: #0f172a;
+  /* border: 10px solid rgb(224, 154, 224); */
+  border-radius: 10px ;
+}
+
+
+
+
+.single-book-description{
+  border: 10px solid rgb(219, 226, 219);
+  background-color: blue;
+}
