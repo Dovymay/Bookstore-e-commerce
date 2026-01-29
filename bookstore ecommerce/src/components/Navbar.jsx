@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="navbar-container">
-      <Link>
+      <Link to="/">
         <p>Home</p>
       </Link>
 
@@ -12,7 +12,7 @@ const Navbar = () => {
         </input> 
       </label>
 
-      <Link>
+      <Link to="/cart">
         <p className="cart-image-navbar">🛒</p>
       </Link>
     </div>

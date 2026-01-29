@@ -8,7 +8,7 @@
  "accent-teal": "#2dd4bf", // Bright Teal 400 font color for details page
 "teal-dim": "#134e4a", // Deep Teal
 
-*/
+*/ 
 
 *{
   margin: 0;
@@ -32,6 +32,10 @@ body {
   background-color: #020617 ;
 }
 
+.navbar-container a{
+  text-decoration: none;
+}
+
 .search{
   background-color: #0f172a ;
   color:#2dd4bf; 
@@ -46,21 +50,47 @@ body {
   flex-direction: column;
   /* align-items:  */
   /* padding: 10px; */
+  justify-content: center;
+  text-align: center;
   margin: 20px 7px 20px 20px;
-  width: 18vw;
+  width: 21vw;
+  /* border: 5px solid  #1040ae; */
+}
+
+.book-card a{
+  text-decoration: none;
+  color: white;
+}
+
+.book-card h5{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: small;
+  text-align: center;
+}
+
+.book-card p{
+  margin: 0px;
+  color: white;
+  font-size: x-small;
+  text-align: center;
 }
 
 .book-cover{
   width: 15vw;
   height: 25vh;
   object-fit: contain;
+  /* border: 5px solid rgb(185, 37, 37); */
 
 }
 
 .book-container{
   display: flex;
   flex-wrap: wrap;
-  width: 99vw;
+  margin: 20px auto;
+  width: 80vw;
+  /* border: 5px solid white; */
+  justify-content: center;
 }
 
 .single-book-container{
@@ -88,7 +118,7 @@ body {
 }
 
 .Single-book-cover{
-  width: 20vw;
+  width: 25vw;
   height: 70vh;
   object-fit: cover;
 }
@@ -101,6 +131,7 @@ body {
 .single-book-title h5{
   color: #2dd4bf;
   margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 .single-book-title p {
@@ -110,11 +141,22 @@ body {
 .single-book-title h4{
   background-color: #134e4a;
   color: #2dd4bf;
-  width: 6vw;
+  display: inline-block;
   border-radius: 5px;
-  text-align: center;
-  padding: 3px 0;
+ font-size: small;
+  padding: 5px 10px;
   margin-top: 10px;
+}
+
+.Category{
+  padding: 5px 10px;
+  background-color: #134e4a;
+  border-radius: 5px;
+  margin: 0px;
+  display: inline-block;
+  font-style: italic;
+  color: #2dd4bf;
+  font-size: x-small;
 }
 
 .rating-div{
@@ -138,10 +180,10 @@ body {
 .discount{
   background-color: #134e4a;
   color: #2dd4bf;
-  width: 5vw;
-  text-align: center;
+  display: inline-block;
+  padding: 3px 5px 3px 5px;
   border-radius: 5px;
-  margin-top: 1px;
+  font-size:xx-small;
 }
 
 

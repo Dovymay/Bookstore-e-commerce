@@ -1,5 +1,5 @@
 import './App.css'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import Homepage from './pages/homepage'
 import BookDetailsPage from './pages/BookDetailsPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<Homepage/>}/>
         <Route path="*" element={<NotFoundPage/>}/>
         <Route path="/books/:id" element={<BookDetailsPage/>}/>
+        <Route path="/cart" element={<h1 style={{color: 'white'}}>Cart Page - Coming Soon!</h1>}/>
   
       </Routes>
     </>

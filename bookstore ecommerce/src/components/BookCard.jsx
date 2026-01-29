@@ -7,7 +7,7 @@ const BookCard = ({ books }) => {
         <div key={book.id} className="book-card">
           <Link to={`/books/${book.id}`}>
             <img src={book.image} alt={book.book_name} className="book-cover" />
-            <h4>{book.book_name}</h4>
+            <h5>{book.book_name}</h5>
           </Link>
           <p>{book.author}</p>
           <p>${book.price.toFixed(2)}</p>
