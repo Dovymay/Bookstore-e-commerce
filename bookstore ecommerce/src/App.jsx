@@ -4,6 +4,7 @@ import Homepage from './pages/homepage'
 import BookDetailsPage from './pages/BookDetailsPage'
 import NotFoundPage from './pages/NotFoundPage'
 import { Route, Routes } from 'react-router-dom'
+import Addbook from './pages/Addbook'
 function App() {
   
 
@@ -15,7 +16,7 @@ function App() {
         <Route path="*" element={<NotFoundPage/>}/>
         <Route path="/books/:id" element={<BookDetailsPage/>}/>
         <Route path="/cart" element={<h1 style={{color: 'white'}}>Cart Page - Coming Soon!</h1>}/>
-  
+       <Route path="/addBook" element={<Addbook/>} />
       </Routes>
     </>
   )

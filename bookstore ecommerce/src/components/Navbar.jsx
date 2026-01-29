@@ -15,6 +15,12 @@ const Navbar = () => {
       <Link to="/cart">
         <p className="cart-image-navbar">🛒</p>
       </Link>
+
+      <div className="Admin-button-div">
+        <Link to="/addBook">
+          <button className="add-book-button">Admin</button>
+        </Link>
+      </div>
     </div>
   );
 };
