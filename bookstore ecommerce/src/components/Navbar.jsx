@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { BookstoreContext } from "../context/BookstoreContext";
 import { useContext, useState, useEffect } from "react";
+import logoImage from "../assets/logo-image.png"
 
 
 const Navbar = () => {
@@ -20,6 +21,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
+
+      {/* <h2>Beyond Pages</h2> */}
+<img src={logoImage} alt="Beyond Pages Logo" className="logo-image-navbar"/>
       <Link to="/">
         <p>Home</p>
       </Link>

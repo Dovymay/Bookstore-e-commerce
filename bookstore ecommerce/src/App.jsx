@@ -7,10 +7,11 @@ import { Route, Routes } from 'react-router-dom'
 import Addbook from './pages/Addbook'
 import EditBook from './pages/EditBook'
 import Admin from './pages/Admin'
+import Footer from './components/Footer'
 function App() {
   
 
-  return (
+  return ( 
     <>
       <Navbar/>
       <Routes>
@@ -22,6 +23,7 @@ function App() {
        <Route path="/editBook/:id" element={<EditBook/>}/>
        <Route path="/admin" element={<Admin/>}/>
       </Routes>
+      <Footer/>
     </>
   )
 }

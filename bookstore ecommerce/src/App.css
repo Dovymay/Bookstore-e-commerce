@@ -7,33 +7,46 @@
 "border-navy": "#1e293b", // Navy 800
  "accent-teal": "#2dd4bf", // Bright Teal 400 font color for details page
 "teal-dim": "#134e4a", // Deep Teal
-
+Roboto Mono
+Fira Sans
+Jost
 */ 
 
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Jost', sans-serif;
+
   /* background-color: #020617; */
   /* color: white; */
 }
 
 body {
   background-color: #020617;
+  font-weight: 300;
 }
 
 .navbar-container{
   display: flex;
   color: white;
   justify-content: space-evenly;
+  align-items: center;
   padding: 20px 0;
   border-bottom: 3px solid  #0f172a;
   position: sticky;
   top: 0;
   background-color: #020617 ;
+  height: 35px;
 }
 
 .navbar-container a{
   text-decoration: none;
+  color: white;
+}
+
+.logo-image-navbar{
+  width: 40vw;
+  height: auto;
 }
 
 .search{
@@ -43,6 +56,7 @@ body {
   border-radius: 5px;
   padding: 7px;
   width: 250px;
+  margin-top: 25px;
 }
 
 .book-card{
@@ -74,6 +88,45 @@ body {
   color: white;
   font-size: x-small;
   text-align: center;
+}
+
+.book-list-grid p{
+  margin: 0px;
+  color: white;
+  font-size: x-small;
+  text-align: center;
+}
+
+.pagination {
+  color: #198173;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: large;
+}
+
+.pagination span {
+  margin-top: 7px;
+}
+
+.pagination button {
+  gap: 5px;
+  border: 1px solid  #198173;
+  background-color: #020617;
+  color: #2dd4bf;
+  border-radius: 5px;
+  padding: 10px 6px;
+  width: 10vw;
+  cursor: pointer;
+  /* cursor: pointer;
+  background-color: #198173;
+  color: white;
+  border-radius: 5px;
+  width: 20vw;
+  padding: 10px 0px;
+  border: none; */
 }
 
 .book-cover{
@@ -191,9 +244,6 @@ body {
   font-size:xx-small;
 }
 
-
-
-
 .buy-button {
   cursor: pointer;
   background-color: #198173;
@@ -274,15 +324,49 @@ label {
   padding: 10px 15px;
   border: none;
 }
-/* input, textarea, select {
-  width: 100%;
+input, textarea, select {
+  display:block;
+  /* margin-left: 20px; */
+  margin-top: 10px;
+  
+  width: 70%;
   padding: 8px;
   margin-bottom: 15px;
   border: 1px solid #334155;
   border-radius: 4px;
   background-color: #0f172a;
   color: white;
-} */
+}
 
+.book-form {
+  margin-top: 25px;
+  margin-left: 45px;
+}
 
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #020617;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  width: 100vw;
+  border-top: #0f172a 2px solid;
+  background-color: #070c1b;
+}
 
+.footer-about {
+  margin-bottom: 35px;
+}
+
+.footer-about p {
+  text-align: justify;
+  width: 30vw;
+}
+
+.footer-about h3 {
+  text-align: start;
+}
