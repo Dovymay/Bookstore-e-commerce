@@ -262,7 +262,7 @@ body {
   font-size:xx-small;
 }
 
-.buy-button {
+.buy-button, .checkout-btn, .add-new-book, .admin-button {
   cursor: pointer;
   background-color: #198173;
   color: white;
@@ -272,7 +272,7 @@ body {
   border: none;
 }
 
-.addCart-button {
+.addCart-button, .cart-remove {
   border: 1px solid  #198173;
   background-color: #020617;
   color: #2dd4bf;
@@ -402,3 +402,58 @@ input, textarea, select {
 /* =========================================
    8. NEW: SHOPPING CART UI
    ========================================= */
+
+.cart-page{
+  color: white;
+  /* display: flex; */
+}
+
+.cart-item{
+  /* border: 4px solid blue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+.cart-image{
+  /* border: 4px solid green; */
+  width: 15vw;
+  margin-bottom: 5px;
+}
+
+
+.cart-book-details{
+  display: flex;
+  flex-direction: column;
+  /* border: 4px solid rgb(128, 0, 38); */
+  width: 30vw;
+  padding: 15px 0 0 15px;
+}
+
+.cart-remove {
+  margin-top: 20px;
+}
+
+.cart-total{
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+/* border: 4px solid green; */
+width: 85vw;
+margin: 20px 0;
+}
+
+.cart-title{
+  text-align: center;
+  /* border: 4px solid rgb(171, 22, 47); */
+  padding: 10px 0;
+  margin: 20px 0 55px 0 ;
+}
+
+.nav-cart{
+  display: flex;
+}
+
+.cart-image-navbar{
+  margin-right: 6px;
+}

@@ -6,17 +6,17 @@ import { CartContext } from "../context/CartContext";
 
 
 const BookDetailsPage = () => {
-  const { fetchSingleBook, users,} =
+  const { fetchSingleBook, users, books, setEditBook} =
     useContext(BookstoreContext);
 
-    const { fetchCart, addItem } = useContext(CartContext)
+    const { addToCart } = useContext(CartContext)
 
   const { id } = useParams();
   const [book, setBook] = useState({});
 
   useEffect(() => {
-    fetchSingleBook(id, setBook);
-  }, [id]);
+    fetchSingleBook(id, setBook, setEditBook);
+  }, [id, fetchSingleBook]);
 
   return (
     <div className="single-book-container">
@@ -58,9 +58,9 @@ const BookDetailsPage = () => {
 
           <div className="single-book-buttons">
             <Link to="/cart/1">
-            <button className="buy-button" onClick={addItem}>Buy Now</button>
+            <button className="buy-button" onClick={() => addToCart(book)}>Buy Now</button>
             </Link>
-            <button className="addCart-button" >Add to Cart 🛒</button>
+            <button className="addCart-button" onClick={() => addToCart(book)} >Add to Cart 🛒</button>
           </div>
         </div>
 
