@@ -1,6 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import Homepage from './pages/homepage'
+import Homepage from './pages/Homepage'
 import BookDetailsPage from './pages/BookDetailsPage'
 import NotFoundPage from './pages/NotFoundPage'
 import { Route, Routes } from 'react-router-dom'
