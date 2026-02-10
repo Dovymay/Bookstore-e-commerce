@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import axios from "axios";
+import api from "../../api";
 // import { BookstoreContext } from "./BookstoreContext"
 
 const CartContext = createContext();
@@ -12,7 +12,7 @@ const Cart = ({ children }) => {
   useEffect (() => {
     const  syncCart = async () => {
         try {
-            await axios.patch(`http://localhost:5005/cart/1`, {
+            await api.patch(`/cart/1`, {
             cart: cart // first cart is from the backend and the second cart is the state 
             })
         } catch (error) {

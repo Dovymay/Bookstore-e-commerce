@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../../api";
 import { createContext, useEffect, useState } from "react";
 // import {CartContext} from "./CartContext"
 // import { useNavigate } from "react-router-dom";
@@ -19,8 +19,8 @@ const Bookstore = ({children}) => {
 // 1. FETCH A SINGLE BOOK
      const fetchSingleBook = async (id) => {
         try {
-            const response = await axios.get(
-                `http://localhost:5005/books/${id}`)
+            const response = await api.get(
+                `/books/${id}`)
                  return response.data;
         } catch (error) {
             console.log(error)
@@ -32,7 +32,7 @@ const Bookstore = ({children}) => {
      useEffect (()=>{
         const fetchBookStore = async () => {
         try {
-            const response = await axios.get("http://localhost:5005/books")
+            const response = await api.get("/books")
 
             setBooks(response.data)
             console.log(response.data)
@@ -46,7 +46,7 @@ const Bookstore = ({children}) => {
 // 3. FETCH ALL USERS    
         const fetchUsers = async () => {
             try{
-                const response = await axios.get("http://localhost:5005/users")
+                const response = await api.get("/users")
                 setUsers (response.data)
                 console.log (response.data)
             } catch (error){

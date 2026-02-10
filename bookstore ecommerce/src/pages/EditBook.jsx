@@ -2,7 +2,7 @@ import Bookform from "../components/Bookform"
 import { useContext, useEffect, useState } from 'react'
 import { BookstoreContext } from '../context/BookstoreContext';
 import { useNavigate } from 'react-router-dom';
-import axios from "axios";
+import api from "../../api";
 import { useParams } from "react-router-dom"; 
 
 const EditBook = () => {
@@ -38,7 +38,7 @@ const EditBook = () => {
     const handleUpdateBook = async (e) =>{
     e.preventDefault()
     try{
-        const response = await axios.put(`http://localhost:5005/books/${id}`, {...editBook, price: Number(editBook.price), discounts: Number (editBook.discounts)})
+        const response = await api.put(`/books/${id}`, {...editBook, price: Number(editBook.price), discounts: Number (editBook.discounts)})
         console.log(response.data)
         const updatedBooks = books.map((book) => 
         book.id === id ? response.data : book
@@ -53,7 +53,7 @@ const EditBook = () => {
      
    const handleDeleteBook = async () => {
       try {
-        await axios.delete(`http://localhost:5005/books/${id}`)
+        await api.delete(`/books/${id}`)
         setBooks((prev)=> prev.filter((book)=> book.id !== id))
         nav("/")
       } catch (error) {

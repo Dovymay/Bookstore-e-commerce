@@ -1,9 +1,9 @@
 // import React from 'react'
-import axios from 'axios';
 import Bookform from '../components/Bookform' 
 import { useContext, useState } from 'react'
 import { BookstoreContext } from '../context/BookstoreContext';
 import { useNavigate } from 'react-router-dom';
+import api from '../../api';
 
 const Addbook = () => {
 const{ books, setBooks} = useContext(BookstoreContext)
@@ -27,7 +27,7 @@ const{ books, setBooks} = useContext(BookstoreContext)
 
 
 try {
-    const response =  await axios.post("http://localhost:5005/books", {...formData, price: Number(formData.price), discounts: Number (formData.discounts)})
+    const response =  await api.post("/books", {...formData, price: Number(formData.price), discounts: Number (formData.discounts)})
     console.log(response.data) 
     setBooks([...books, response.data])
     nav("/")
